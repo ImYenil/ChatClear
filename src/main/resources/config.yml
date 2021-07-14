@@ -1,0 +1,6 @@
+prefix: "&8[&eChatClear&8]&r "
+main_command:
+  name: "chatclear"
+  description: "Main ChatClear command"
+  aliases:
+    - "cc"
