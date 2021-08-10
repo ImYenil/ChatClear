@@ -24,6 +24,9 @@ public class CCClearSubCommand extends CCSubCommand
             Player p = (Player) sender;
             if (args.length == 0) {
                 for (int x = 0; x < 150; ++x) {
+                    if (p.hasPermission("chatclear.bypass") || p.isOp()) {
+                        return true;
+                    }
                     Bukkit.getServer().broadcastMessage(" ");
                 }
                 Bukkit.broadcastMessage(Message.CHAT_CLEAR.getMessageWithPrefix().replace("{player}", p.getName()));
